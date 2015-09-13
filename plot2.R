@@ -8,5 +8,5 @@ epcSubData <- epcFullData[epcFullData$Date==d1 | epcFullData$Date==d2,]
 rm(epcFullData)
 
 png("plot2.png",width=480,height=480,units="px",bg="white")
-with(epcSubData,plot(Time,Global_active_power,type="l",xlab="DateTime",ylab="Global Active Power (kilowatts)"))
+with(epcSubData,plot(Time,Global_active_power,type="l",xlab="",ylab="Global Active Power (kilowatts)"))
 dev.off()
