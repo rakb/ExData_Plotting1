@@ -1,4 +1,8 @@
-#Assumes the file household_power_consumption.txt is there in current working directory
+##################################################
+#Exploratory Data Course Project 1
+#Assumes the file household_power_consumption.txt 
+#is there in current working directory
+#################################################
 epcFullData <- read.table("household_power_consumption.txt",header=TRUE,sep=";",stringsAsFactors=FALSE,na.strings=c(" ","?"))
 epcFullData$Time <- strptime(paste(epcFullData$Date,epcFullData$Time),"%d/%m/%Y %H:%M:%S")
 epcFullData$Date <- as.Date(epcFullData$Date,"%d/%m/%Y")
@@ -19,3 +23,4 @@ with(epcSubData,{
 	plot(Time,Global_reactive_power,type="l",xlab="datetime",ylab="Global Reactive Power")
 })	
 dev.off()
+##################################################3
